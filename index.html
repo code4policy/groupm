@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Demo Website</title>
-    </head>
-    <body>
-        <h1>Our Demonstration Website</h1>
-        <a href='our-team/index.html'>Learn more about our team</a>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guided Course Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Guided Course Selection System</h1>
+    </header>
+
+    <div class="container">
+        <h2>Career Pathway Survey</h2>
+        <p>Fill out the details below to receive personalized course recommendations:</p>
+        
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="careerGoal">What is your primary career goal?</label>
+                <input type="text" id="careerGoal" name="careerGoal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="industryPreference">Preferred Industry:</label>
+                <select id="industryPreference" name="industryPreference" required>
+                    <option value="">Select an Industry</option>
+                    <option value="Data & Technology">Data & Technology</option>
+                    <option value="Government & Politics">Government & Politics</option>
+                    <option value="International Development">International Development</option>
+                    <option value="Leadership & Organizational Change">Leadership and Organizational Change</option>
+                    <option value="Entrepreneurship & Non-Profits">Entrepreneurship & Non-Profits</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="skills">What skills do you wish to acquire?</label>
+                <input type="text" id="skills" name="skills" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="results" id="results">
+            <h3>Recommended Courses</h3>
+            <ul id="courseList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
